@@ -23,6 +23,15 @@ app.listen(PORT, () => console.log('api running'))
 
 app.get('/', async (req, res) => {
   let data = await games.find().toArray()
+  data = [
+    {
+      name : 'sonny',
+      team : 'spurs',
+      goal : 35,
+      age : 32,
+      country : 'south korea'
+    }
+  ]
   console.log(data,"data")
   res.json(data)
 })
