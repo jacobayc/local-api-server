@@ -21,7 +21,7 @@ app.use(express.json())
 
 app.listen(PORT, () => console.log('api running'))
 
-app.get('/', async (req, res) => {
+app.get('/api/sports', async (req, res) => {
   let data = await games.find().toArray()
   data = [
     {
